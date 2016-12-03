@@ -1,10 +1,10 @@
 // Include Server Dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
-var logger = require('morgan');
 var mongoose = require('mongoose');
 
 //Require Schemas
+export MONGOLAB_URI="mongodb://example:example@ds053312.mongolab.com:53312/todolist"
 var Article = require('./server/model.js');
 
 // Create Instance of Express
