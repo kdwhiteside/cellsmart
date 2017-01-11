@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
-
 app.use(express.static('./public'));
 
 // -------------------------------------------------
@@ -48,9 +47,9 @@ app.get('/iphone-repairs', function (req, res) {
 	res.sendFile(path.join(__dirname, './public/iphone-repairs.html'));
 });
 
-app.get('/google-repairs'), function(req, res) {
-	res.sendFile('./public/google-repairs.html')
-}
+app.get('/google-repairs', function (req, res) {
+	res.sendFile(path.join(__dirname, './public/google-repairs.html'));
+});
 
 app.get('/tablet-repairs'), function(req, res) {
 	res.sendFile('./public/tablet-repairs.html')
